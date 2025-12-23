@@ -39,8 +39,8 @@ application/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/BenoitFaure/MedGemma_DeepMind.git
-cd MedGemma_DeepMind/application
+git clone https://github.com/MeetInCode/AI-4-Alzheimer-s.git
+cd AI-4-Alzheimer-s/application
 ```
 
 ### 2. Backend Setup (Python/FastAPI)

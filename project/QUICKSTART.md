@@ -19,13 +19,13 @@ The project has been successfully set up with the following:
 
 **Backend:**
 ```cmd
-cd MedGemma_DeepMind\application
+cd application
 run_backend.bat
 ```
 
 **Frontend (in a new terminal):**
 ```cmd
-cd MedGemma_DeepMind\application
+cd application
 run_frontend.bat
 ```
 
@@ -33,14 +33,14 @@ run_frontend.bat
 
 **Backend:**
 ```bash
-cd MedGemma_DeepMind/application
+cd application
 chmod +x run_backend.sh
 ./run_backend.sh
 ```
 
 **Frontend (in a new terminal):**
 ```bash
-cd MedGemma_DeepMind/application
+cd application
 chmod +x run_frontend.sh
 ./run_frontend.sh
 ```
@@ -50,7 +50,7 @@ chmod +x run_frontend.sh
 #### Backend:
 
 ```bash
-cd MedGemma_DeepMind/application
+cd application
 
 # Windows
 .\venv\Scripts\Activate.ps1
@@ -64,7 +64,7 @@ python -m uvicorn back.back:app --host 0.0.0.0 --port 8000 --reload
 #### Frontend:
 
 ```bash
-cd MedGemma_DeepMind/application/front
+cd application/front
 npm run dev
 ```
 
@@ -72,7 +72,7 @@ npm run dev
 
 Before running, you need to configure your Google Cloud credentials in:
 
-`MedGemma_DeepMind/application/back/back_environment.py`
+`application/back/back_environment.py`
 
 Update the following values:
 - `PROJECT_ID` - Your GCP project ID

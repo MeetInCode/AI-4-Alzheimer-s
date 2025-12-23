@@ -66,3 +66,8 @@ desktop.ini
 # uv.lock
 # package-lock.json
 
+# Exclude parent directory files
+../
+../*
+!../project/
+

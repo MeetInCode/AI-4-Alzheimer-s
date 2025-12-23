@@ -36,25 +36,25 @@ The project is organized into several core components, each with its own detaile
 
 We trained a `nnU-Net` model on a private dataset of FLAIR MRI scans to perform robust and accurate segmentation of brain edemas. This model serves as the first step in our pipeline, providing the precise location and volume of ARIA-E.
 
-> 📚 For a detailed explanation of the data preprocessing, training, and inference process, please see the **`nnunet_segmentation/README.md`**.
+> 📚 For a detailed explanation of the data preprocessing, training, and inference process, please see the **`nnunet-inference/README.md`** and **`nnunet-train/README.md`**.
 
 ### 🤖 2. Fine-Tuned MedGemma for MRI Interpretation
 
 We fine-tuned Google's MedGemma model to understand the context of ARIA-E and interpret the segmentation masks from our nnU-Net model. This specialized model is capable of describing the location and changes in edema over time in a structured manner. This model is available on [🤗 Hugging Face](https://huggingface.co/axel-darmouni/medgemma-4b-it-sft-lora-brain-regions)
 
-> 📚 To learn more about the fine-tuning dataset, methodology, and evaluation, refer to the **`medgemma_finetuning/README.md`**.
+> 📚 To learn more about the fine-tuning dataset, methodology, and evaluation, refer to the **`finetuning/README.md`**.
 
 ### 🔍 3. Retrieval-Augmented Generation (RAG) System
 
 To ground MedGemma's responses in the latest scientific evidence, we implemented a RAG system. The knowledge base is built from recent academic papers on ARIA, which are chunked semantically using the Gemini API and stored as embeddings in a vector database on Google Cloud Storage.
 
-> 📚 For details on the RAG architecture, vector database schema, and retrieval strategies, please consult the **`rag_medgemma/README.md`**.
+> 📚 For details on the RAG architecture, vector database schema, and retrieval strategies, please consult the **`medgemma/README.md`**.
 
 ### 🔄 4. Automated Knowledge Base Updates
 
 A crucial part of our RAG system is ensuring the knowledge base remains current. We developed a serverless function on Google Cloud that runs weekly to scrape, download, and process the latest publications on ARIA, automatically updating our vector database.
 
-> 📚 The implementation details of this data ingestion pipeline are available in **`rag_medgemma/README.md`**.
+> 📚 The implementation details of this data ingestion pipeline are available in **`medgemma/README.md`**.
 
 ### 📊 5. Report Generation and Refinement
 
@@ -73,8 +73,8 @@ To set up the project locally, please refer to the `README.md` file within each 
 
 ```bash
 # Clone the repository
-git clone https://github.com/BenoitFaure/MedGemma_DeepMind.git
-cd MedGemma_DeepMind
+git clone https://github.com/MeetInCode/AI-4-Alzheimer-s.git
+cd AI-4-Alzheimer-s
 # Follow instructions in each sub-directory's README
 ```
 
@@ -160,7 +160,7 @@ This integration is licensed under the Apache 2.0 License.
 
 <embed src="PRESENTATION_GEMMARIA.pdf" type="application/pdf" width="100%" height="600px" />
 
-**Note:** If the PDF doesn't display in your browser, you can [download it directly](./PRESENTATION_GEMMARIA.pdf) or [view it in GitHub](https://github.com/BenoitFaure/MedGemma_DeepMind/blob/main/PRESENTATION_GEMMARIA.pdf).
+**Note:** If the PDF doesn't display in your browser, you can [download it directly](./PRESENTATION_GEMMARIA.pdf) or [view it in GitHub](https://github.com/MeetInCode/AI-4-Alzheimer-s/blob/main/PRESENTATION_GEMMARIA.pdf).
 
 🤗 IRM Finetuned Model on [HuggingFace](https://huggingface.co/axel-darmouni/medgemma-4b-it-sft-lora-brain-regions)
 

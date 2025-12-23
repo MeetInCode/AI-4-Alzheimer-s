@@ -20,7 +20,7 @@ The repository has already been cloned to your workspace.
 #### 2.1 Navigate to Application Directory
 
 ```bash
-cd MedGemma_DeepMind/application
+cd application
 ```
 
 #### 2.2 Create Virtual Environment
@@ -96,7 +96,7 @@ The backend will be available at: `http://localhost:8000`
 #### 3.1 Navigate to Frontend Directory
 
 ```bash
-cd MedGemma_DeepMind/application/front
+cd application/front
 ```
 
 #### 3.2 Install Node.js Dependencies
@@ -116,7 +116,6 @@ The frontend will be available at: `http://localhost:3000`
 ## 📁 Project Structure
 
 ```
-MedGemma_DeepMind/
 ├── application/
 │   ├── back/                    # Backend (FastAPI)
 │   │   ├── back.py             # Main FastAPI application
@@ -132,8 +131,10 @@ MedGemma_DeepMind/
 │   ├── requirements.txt        # Python dependencies
 │   └── venv/                   # Python virtual environment
 ├── nnunet-inference/           # nnU-Net inference module
-├── medgemma_finetune/          # MedGemma fine-tuning module
-└── rag_medgemma/               # RAG system module
+├── finetuning/                 # MedGemma fine-tuning module
+├── medgemma/                   # RAG system module
+├── nnunet-train/               # nnU-Net training module
+└── rapport/                    # Report generation module
 ```
 
 ## 🔧 Configuration Notes
@@ -165,13 +166,13 @@ The following files have been updated to use cross-platform paths:
 
 ### Start Backend
 
-1. Navigate to `MedGemma_DeepMind/application`
+1. Navigate to `application`
 2. Activate virtual environment: `.\venv\Scripts\Activate.ps1` (Windows) or `source venv/bin/activate` (Linux/Mac)
 3. Run: `python -m back.back` or `uvicorn back.back:app --reload`
 
 ### Start Frontend
 
-1. Navigate to `MedGemma_DeepMind/application/front`
+1. Navigate to `application/front`
 2. Run: `npm run dev`
 
 ## 📡 API Endpoints
