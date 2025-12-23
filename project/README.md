@@ -290,7 +290,6 @@ MedGemma is governed by the [Health AI Developer Foundations terms of use](https
 
 - **GitHub Repository:** https://github.com/MeetInCode/AI-4-Alzheimer-s
 - **Fine-tuned Model:** https://huggingface.co/meet12341234/medgemma_finetuned_for_Alzheimers
-- **Project Presentation:** [PRESENTATION_GEMMARIA.pdf](./PRESENTATION_GEMMARIA.pdf)
 
 ## 🤝 Contributing
 
